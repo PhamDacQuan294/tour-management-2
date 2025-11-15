@@ -12,7 +12,7 @@ export const index = async (req: Request, res: Response) => {
   }
 }
 
-// [POST] /admin/tours/list-tours
+// [GET] /admin/tours/list-tours
 export const listTours = async (req: Request, res: Response) => {
   try {
     const tours = await Tour.findAll({
@@ -34,6 +34,31 @@ export const listTours = async (req: Request, res: Response) => {
     res.json({
       tours: tours
     })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// [PATCH] /admin/tours/delete/:id
+export const deleteTour = async (req: Request, res: Response) => {
+  try {
+    const id: String = req.params.id;
+
+    await Tour.update(
+      {
+        deleted: true
+      },
+      {
+        where: {
+          id: id
+        }
+      }
+    );
+
+    res.json({
+      code: 200
+    });
+
   } catch (error) {
     console.log(error);
   }

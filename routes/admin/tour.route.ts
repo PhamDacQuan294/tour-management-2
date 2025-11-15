@@ -7,4 +7,6 @@ router.get("/", controller.index);
 
 router.get("/list-tours", controller.listTours);
 
+router.patch("/delete/:id", controller.deleteTour);
+
 export const tourRoutes: Router = router;

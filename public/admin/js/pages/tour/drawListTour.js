@@ -31,11 +31,7 @@ export const drawListTour = async () => {
         <td>
           <a class="btn btn-secondary btn-sm">Chi tiết</a>
           <a class="btn btn-warning btn-sm ml-1">Sửa</a>
-          <button 
-            class="btn btn-danger btn-sm ml-1"
-            button-delete
-            data-id="${item.id}"
-          >Xóa</button>
+          <button class="btn btn-sm btn-danger" btn-delete="${item.id}">Xóa</button>
         </td>
       </tr>
     `;
