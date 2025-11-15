@@ -1,0 +1,1 @@
+export const listTour = document.querySelector("[list-tour]");

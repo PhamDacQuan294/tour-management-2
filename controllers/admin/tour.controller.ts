@@ -4,6 +4,17 @@ import Tour from "../../models/tour.model";
 // [GET] /admin/tours/
 export const index = async (req: Request, res: Response) => {
   try {
+    res.render("admin/pages/tours/index", {
+      pageTitle: "Danh sách tour",
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// [POST] /admin/tours/list-tours
+export const listTours = async (req: Request, res: Response) => {
+  try {
     const tours = await Tour.findAll({
       where: {
         deleted: false,
@@ -20,8 +31,7 @@ export const index = async (req: Request, res: Response) => {
       item["price_special"] = (item["price"] * (1 - item["discount"] / 100));
     });
 
-    res.render("admin/pages/tours/index", {
-      pageTitle: "Danh sách tour",
+    res.json({
       tours: tours
     })
   } catch (error) {
