@@ -1,0 +1,20 @@
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f7f7;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main */
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background: #f7f7f7;
+}

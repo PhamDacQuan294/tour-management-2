@@ -1,0 +1,22 @@
+/* ======= Badge trạng thái ======= */
+.badge {
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.badge-success {
+  background-color: #22c55e !important;
+}
+.badge-danger {
+  background-color: #ef4444 !important;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

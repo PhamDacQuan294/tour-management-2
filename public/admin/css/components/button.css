@@ -1,0 +1,32 @@
+/* ======= Nút hành động ======= */
+.btn {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  color: #fff;
+}
+.btn-warning {
+  background-color: #f59e0b;
+  color: #fff;
+}
+.btn-danger {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ======= Nút thêm mới ======= */
+a.btn.btn-outline-success {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 6px 16px;
+}
