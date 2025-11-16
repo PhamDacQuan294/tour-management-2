@@ -1,9 +1,19 @@
 header.header
-  .header-left
-    button.toggle-btn
-      i.fa-solid.fa-bars
-    h3 ADMIN
+  .container-fluid
+    .row.align-items-center
+      .col-3
+        .inner-logo
+          button.toggle-btn
+            i.fa-solid.fa-bars
+          a(href=`/${prefixAdmin}/dashboard`) ADMIN
 
-  .header-right
-    span.user-name Le Van A
-    a(href="/admin/auth/logout", class="logout") Đăng xuất
+      .col-9
+        div(class="text-right")
+          a(
+            href=`/${prefixAdmin}/my-account`
+            class="btn btn-primary btn-sm mr-2"
+          ) Le Van A
+          a(
+            href=`/${prefixAdmin}/auth/logout`
+            class="btn btn-danger btn-sm"
+          ) Đăng xuất
